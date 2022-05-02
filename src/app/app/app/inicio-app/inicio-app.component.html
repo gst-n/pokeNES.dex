@@ -1,0 +1,39 @@
+<main>
+    <div class="titulo">
+        <h3>Who is this Pokemon?</h3> 
+    </div>
+    
+    <div>
+        <!-- <img class="silueta" src="{{imagen}}" alt=""> -->
+        <img [ngClass]="{'silueta' : verSilueta, 'noSilueta' : !verSilueta }" src="{{imagen}}" alt="">
+    </div>
+
+    <form  id="form" class="input">
+
+        <div class="nes-field">
+            <label for="name_field"></label>
+            <input type="text" #PokeNombre name="PokeNombre" class="nes-input">
+        </div>
+
+        <button (click)="adivinar(PokeNombre.value.toLowerCase())" type="submit" class="nes-btn is-primary" id="button">Guess it</button>
+    </form>
+
+    <button (click)="pokemonRandom()" type="submit" class="nes-btn is-success">Try another one</button>
+
+    <div *ngIf="(PokeNombre.value.toLowerCase() === pokemon.name)" class="nes-container is-rounded">
+        <div id="exito">
+            
+            <p>¡Victory! {{name}} will follow you in this road to become a Master!</p>
+            <i class="nes-icon trophy is-large"></i>
+        </div>
+    </div>
+
+
+    <div *ngIf="showFail" id="fallo" class="nes-container is-rounded">
+        
+        <p>Fail! your Pokemos was: {{name}}. Try again!
+        </p><i class="nes-pokeball"></i>
+    </div>
+
+
+</main>

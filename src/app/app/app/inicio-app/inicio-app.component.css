@@ -1,0 +1,63 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  img {
+    image-rendering: pixelated;
+
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin-top: 3vh;
+  }
+  
+
+  .silueta {
+    -webkit-filter: grayscale(100%) brightness(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) brightness(0);
+    height: 25rem;
+    height: 200px;
+  }
+
+  .noSilueta{
+    image-rendering: pixelated;
+    height: 200px;
+  }
+
+
+  .input{
+    display: block;
+    flex-direction:row;
+    margin-left: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #exito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+
+  #fallo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  i{
+    margin: 10px;
+  }
